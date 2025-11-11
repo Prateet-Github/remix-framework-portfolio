@@ -9,9 +9,9 @@ const Footer = () => {
     { Icon: Github, href: "https://github.com/Prateet-Github", color: "hover:text-gray-300" }
   ]
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // }
 
   return (
     <section id="footer" className="relative">
@@ -137,13 +137,15 @@ const Footer = () => {
             viewport={{ once: true }}
             className="mt-4 text-center text-xs text-gray-500"
           >
-            <p>Designed & Built by Prateet Tiwari • Powered by React & Remix</p>
+            <p>Designed & Built by Prateet Tiwari • Powered by Remix</p>
           </motion.div>
         </div>
 
         {/* Scroll to Top Button */}
-        <motion.button
+        {/* <motion.a
+        href="#intro"
           onClick={scrollToTop}
+          
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -151,9 +153,10 @@ const Footer = () => {
           whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
           whileTap={{ scale: 0.9 }}
           className="absolute bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg cursor-pointer group"
+          
         >
           <ArrowUp className="w-5 h-5 group-hover:animate-bounce" />
-        </motion.button>
+        </motion.a> */}
       </footer>
     </section>
   )

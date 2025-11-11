@@ -81,7 +81,7 @@ const Intro = () => {
         />
         
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {/* {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             animate={{
@@ -100,7 +100,7 @@ const Intro = () => {
               top: `${Math.random() * 100}%`,
             }}
           />
-        ))}
+        ))} */}
       </div>
 
       {/* Main Content */}
@@ -113,7 +113,7 @@ const Intro = () => {
         {/* Badge */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 backdrop-blur-sm"
+          className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mt-10 backdrop-blur-sm"
         >
           <Sparkles className="w-4 h-4 text-blue-400" />
           <span className="text-sm text-blue-400">Available for freelance work</span>
@@ -152,7 +152,7 @@ const Intro = () => {
           className="text-lg text-gray-400 max-w-2xl leading-relaxed"
         >
           I specialize in building high-quality web applications using modern technologies like
-          React, Node.js, and TypeScript. Let's create something amazing together.
+          React, Node.js, Next.js and TypeScript. Let's create something amazing together.
         </motion.p>
 
         {/* Buttons */}
@@ -162,7 +162,7 @@ const Intro = () => {
             whileTap={{ scale: 0.95 }}
             className="py-3 px-8 bg-blue-500 text-white font-semibold rounded-lg cursor-pointer relative overflow-hidden group"
           >
-            <span className="relative z-10">Get in Touch</span>
+            <a href="#contact" className="relative z-10">Get in Touch</a>
             <motion.div
               className="absolute inset-0 bg-blue-600"
               initial={{ x: "-100%" }}
@@ -171,13 +171,14 @@ const Intro = () => {
             />
           </motion.button>
           
-          <motion.button
+          <motion.a
+            href="#projects"
             whileHover={{ scale: 1.05, borderColor: "rgb(59, 130, 246)" }}
             whileTap={{ scale: 0.95 }}
             className="py-3 px-8 border-2 border-gray-700 text-white font-semibold rounded-lg cursor-pointer hover:bg-blue-500/10 transition-colors duration-200"
           >
             View my Work
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Social Links */}
